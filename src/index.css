@@ -1,0 +1,109 @@
+:root {
+  /* Dark theme colors */
+  --bg: #0f0c0b;
+  --surface: #1e1a17;
+  --surface-2: #29231f;
+  --border: #3a322c;
+  --text: #ece4da;
+  --text-muted: #a89b8e;
+
+  /* Milk tea accent */
+  --accent: #c8a27c;
+  --accent-strong: #dcb894;
+  --accent-bg: rgba(200, 162, 124, 0.14);
+  --on-accent: #1a1410;
+
+  --line: rgba(236, 228, 218, 0.12);
+
+  --sans: 'Space Grotesk', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --serif: 'Fraunces', Georgia, serif;
+
+  font: 16px/1.5 var(--sans);
+  color-scheme: dark;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 0%, rgba(200, 162, 124, 0.10), transparent 70%),
+    radial-gradient(ellipse 50% 60% at 100% 100%, rgba(120, 70, 40, 0.12), transparent 70%),
+    var(--bg);
+  background-attachment: fixed;
+}
+
+/* Film grain over the whole page */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 600;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+input[type='text']:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+button {
+  padding: 8px 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--accent);
+}
+
+.primaryBtn {
+  padding: 12px 28px;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+}
+
+.primaryBtn:hover {
+  background: var(--accent-strong);
+}

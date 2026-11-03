@@ -1,0 +1,283 @@
+.DrinkReceipt {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  column-gap: 56px;
+  align-items: center;
+}
+
+/* ---------- Hero cup ---------- */
+
+.DrinkReceipt .hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 48px;
+}
+
+.DrinkReceipt .hero .DrinkCup {
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.55));
+}
+
+.DrinkReceipt .glow {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 120%;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(200, 162, 124, 0.22), transparent 62%);
+}
+
+.DrinkReceipt .floor {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  width: 70%;
+  height: 28px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.7), transparent 70%);
+}
+
+/* ---------- Title block ---------- */
+
+.DrinkReceipt .eyebrow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 0 8px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.DrinkReceipt .orderNumber {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  color: var(--accent);
+}
+
+.DrinkReceipt .name {
+  margin-top: 8px;
+  font-size: clamp(48px, 7vw, 84px);
+  font-weight: 900;
+  font-variation-settings: 'opsz' 144;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  word-break: break-word;
+}
+
+.DrinkReceipt .drinkType {
+  margin: 10px 0 0;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent);
+}
+
+/* ---------- Specs ---------- */
+
+.DrinkReceipt .specs {
+  margin: 40px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.DrinkReceipt .spec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.DrinkReceipt dt {
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.DrinkReceipt dd {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.DrinkReceipt dd > span:last-child {
+  min-width: 5.5em;
+  text-align: right;
+}
+
+.DrinkReceipt .topping {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-style: italic;
+}
+
+.DrinkReceipt .bars {
+  display: flex;
+  gap: 5px;
+}
+
+.DrinkReceipt .bar {
+  width: 22px;
+  height: 4px;
+  background: rgba(236, 228, 218, 0.14);
+}
+
+.DrinkReceipt .bar.on {
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(200, 162, 124, 0.5);
+}
+
+/* ---------- Big numbers ---------- */
+
+.DrinkReceipt .metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 36px;
+}
+
+.DrinkReceipt .metric + .metric {
+  padding-left: 28px;
+  border-left: 1px solid var(--line);
+}
+
+.DrinkReceipt .metricLabel {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.DrinkReceipt .metricValue {
+  display: block;
+  margin-top: 6px;
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+}
+
+.DrinkReceipt .metricValue sup {
+  margin-right: 2px;
+  font-size: 0.4em;
+  vertical-align: 0.9em;
+  color: var(--accent);
+}
+
+.DrinkReceipt .metricValue small {
+  margin-left: 4px;
+  font-size: 0.3em;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.DrinkReceipt .timestamp {
+  margin: 32px 0 0;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.DrinkReceipt .timestamp span {
+  margin-right: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+/* ---------- Action bar ---------- */
+
+.DrinkReceipt .actionBar {
+  position: relative;
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+  padding: 20px 28px;
+  overflow: hidden;
+  background: var(--text);
+  color: var(--bg);
+  text-decoration: none;
+  isolation: isolate;
+}
+
+/* Milk tea fill that pours in from the left on hover */
+.DrinkReceipt .actionBar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.DrinkReceipt .actionBar:hover::before,
+.DrinkReceipt .actionBar:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.DrinkReceipt .actionBar:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.DrinkReceipt .actionLabel {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.6vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.DrinkReceipt .actionArrow {
+  font-size: clamp(22px, 2.6vw, 28px);
+  transition: transform 0.55s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.DrinkReceipt .actionBar:hover .actionArrow {
+  transform: translateX(12px);
+}
+
+/* ---------- Phone ---------- */
+
+@media (max-width: 760px) {
+  .DrinkReceipt {
+    grid-template-columns: 1fr;
+  }
+
+  .DrinkReceipt .hero .DrinkCup {
+    width: 260px;
+  }
+
+  .DrinkReceipt .metric + .metric {
+    padding-left: 18px;
+  }
+
+  .DrinkReceipt .bar {
+    width: 14px;
+  }
+
+  .DrinkReceipt .actionBar {
+    margin-top: 40px;
+    padding: 22px 24px;
+  }
+}

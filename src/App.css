@@ -1,0 +1,28 @@
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+  margin-right: auto;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+
+/* Loading and not-found messages */
+.message {
+  padding: 64px 16px;
+  text-align: center;
+  color: var(--text-muted);
+}

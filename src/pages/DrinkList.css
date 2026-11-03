@@ -1,0 +1,18 @@
+.DrinkList h2 {
+  margin-bottom: 24px;
+}
+
+.DrinkList .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.DrinkList .empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 64px 16px;
+  color: var(--text-muted);
+}

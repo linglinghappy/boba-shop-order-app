@@ -1,0 +1,46 @@
+.DrinkCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  text-align: center;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.DrinkCard:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.DrinkCard .cardLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.DrinkCard h3 {
+  margin-top: 12px;
+}
+
+.DrinkCard .drinkType {
+  margin: 2px 0 0;
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.DrinkCard .details {
+  margin: 4px 0 16px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.DrinkCard .editBtn {
+  padding: 6px 20px;
+  font-size: 14px;
+}

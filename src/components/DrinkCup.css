@@ -1,0 +1,72 @@
+.DrinkCup {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.DrinkCup .glass {
+  fill: rgba(255, 255, 255, 0.04);
+}
+
+.DrinkCup .rim {
+  stroke: var(--text);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.DrinkCup .straw {
+  fill: var(--accent);
+}
+
+.DrinkCup .shine {
+  fill: rgba(255, 255, 255, 0.12);
+}
+
+.DrinkCup .ice {
+  fill: rgba(255, 255, 255, 0.32);
+  stroke: rgba(255, 255, 255, 0.55);
+  stroke-width: 1.5;
+}
+
+.DrinkCup .pearl {
+  fill: #2b1a12;
+}
+
+.DrinkCup .crystal {
+  fill: rgba(255, 255, 255, 0.45);
+  stroke: rgba(255, 255, 255, 0.75);
+  stroke-width: 1.5;
+}
+
+.DrinkCup .grass-jelly {
+  fill: #1f1a14;
+}
+
+.DrinkCup .coconut-jelly {
+  fill: rgba(255, 255, 255, 0.55);
+}
+
+.DrinkCup .pudding {
+  fill: #f0c35a;
+}
+
+.DrinkCup .sugar-on {
+  fill: var(--accent);
+}
+
+.DrinkCup .sugar-off {
+  fill: var(--surface-2);
+  stroke: var(--border);
+}
+
+.DrinkCup .gauge-label {
+  fill: var(--text-muted);
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* Smooth color change when switching drink type */
+.DrinkCup rect {
+  transition: fill 0.3s;
+}

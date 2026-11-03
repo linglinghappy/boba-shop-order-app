@@ -1,0 +1,76 @@
+.DrinkForm {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.DrinkForm .preview {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.DrinkForm .preview h3 {
+  margin-top: 16px;
+}
+
+.DrinkForm .summary {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.DrinkForm form h2 {
+  margin-bottom: 24px;
+}
+
+.DrinkForm .nameLabel {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.DrinkForm input[type='text'] {
+  margin-bottom: 24px;
+}
+
+/* Phone: stack the cup above the form */
+@media (max-width: 700px) {
+  .DrinkForm {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .DrinkForm .preview {
+    position: static;
+  }
+}
+
+.DrinkForm .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.deleteBtn {
+  padding: 12px 28px;
+  background: transparent;
+  border-color: #b5544a;
+  color: #e88a7f;
+}
+
+.deleteBtn:hover {
+  background: rgba(181, 84, 74, 0.15);
+  border-color: #e88a7f;
+}
